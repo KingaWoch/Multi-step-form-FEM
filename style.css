@@ -24,6 +24,10 @@ html,
 body {
   height: 100%;
 }
+img {
+  display: block;
+  max-width: 100%;
+}
 
 body {
   background-color: var(--Magnolia);
@@ -33,12 +37,20 @@ body {
   background-color: var(--White);
 }
 
+@media (max-width: 575px) {
+  .container {
+    background-color: transparent;
+  }
+}
+
 /* SIDEBAR */
 
 .sidebar {
   background-image: url(assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  border-radius: 0.8rem;
   font-size: 0.8rem;
 }
 
@@ -47,6 +59,8 @@ body {
     background-image: url(assets/images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    border-radius: 0%;
   }
 }
 
@@ -54,11 +68,24 @@ body {
   color: var(--Cool-gray);
 }
 
+/* .number {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+} */
+
 .sidebar ul li div {
   color: var(--White);
 }
 
 /* FORM */
+
+.content {
+  background-color: var(--White);
+}
 
 h1 {
   color: var(--Marine-blue);
@@ -84,6 +111,12 @@ input[type="tel"]::placeholder {
   color: var(--Cool-gray);
 }
 
+.form-footer {
+  background-color: var(--White);
+}
+
+/* BUTTONS */
+
 .btn {
   background-color: var(--Marine-blue);
   color: var(--White);
@@ -101,6 +134,32 @@ input[type="tel"]::placeholder {
 .go-back-btn:hover {
   color: var(--Marine-blue);
 }
+
+/* STEP - 2 */
+
+.card-text h3 {
+  color: var(--Marine-blue);
+}
+
+.card-text span {
+  color: var(--Cool-gray);
+  font-size: 0.9rem;
+}
+
+.card-text p {
+  color: var(--Marine-blue);
+  font-size: 0.9rem;
+}
+
+.form-check {
+  background-color: var(--Alabaster);
+}
+
+.form-check label {
+  color: var(--Cool-gray);
+}
+
+/* TABLE STEP-4 */
 
 .table {
   background-color: var(--Alabaster);
@@ -144,4 +203,20 @@ tbody td:first-child {
 
 footer {
   font-size: 0.7rem;
+}
+
+@media (max-width: 575px) {
+  .content {
+    position: absolute;
+    width: 90%;
+    top: 63px;
+    right: 5%;
+  }
+
+  .form-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
 }

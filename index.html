@@ -36,9 +36,9 @@
   <body
     class="d-flex flex-column align-items-center justify-content-lg-center gap-3"
   >
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-md-4 col-12 align-items-center">
+    <div class="container p-sm-3 p-0 rounded-3">
+      <div class="row g-0">
+        <div class="col-md-4 col-12">
           <!-- <picture
             ><source
               srcset="assets/images/bg-sidebar-desktop.svg"
@@ -46,7 +46,7 @@
             <img src="assets/images/bg-sidebar-mobile.svg" alt=""
           /></picture> -->
           <div
-            class="sidebar h-100 p-4 gap-3 text-uppercase d-flex justify-content-sm-start flex-sm-column flex-row justify-content-center"
+            class="sidebar h-100 p-sm-4 pt-2 pb-5 gap-3 text-uppercase d-flex justify-content-sm-start flex-sm-column flex-row justify-content-center"
           >
             <!-- Sidebar start -->
             <ul class="list-group list-group-horizontal d-flex">
@@ -105,107 +105,131 @@
           </div>
         </div>
         <div class="col-md-8 col-12">
-          <div class="form-container p-5 d-grid gap-3">
+          <div class="form-container p-5 d-grid gap-3 mx-3">
             <!-- Step 1 start -->
-            <header>
-              <h1>Personal info</h1>
-              <p>Please provide your name, email address, and phone number.</p>
-            </header>
-            <form novalidate class="fw-bold d-grid gap-4">
-              <div class="row">
-                <label for="name" class="form-label col-6 p-0">Name</label>
-                <span class="form-text col-6 text-end p-0"
-                  >This field is required</span
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="form-control fw-bold"
-                  placeholder="e.g. Stephen King"
-                  required
-                />
-              </div>
-              <div class="row">
-                <label for="email" class="form-label col-6 p-0"
-                  >Email Address</label
-                ><span class="form-text col-6 text-end p-0"
-                  >This field is required</span
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="form-control fw-bold"
-                  placeholder="e.g. stephenking@lorem.com"
-                  required
-                />
-              </div>
 
-              <div class="row">
-                <label for="phone" class="form-label col-6 p-0"
-                  >Phone Number</label
-                >
-                <span class="form-text col-6 text-end p-0"
-                  >This field is required</span
-                >
-                <input
-                  type="tel"
-                  id="phone"
-                  class="form-control fw-bold"
-                  placeholder="e.g. +1 234 567 890"
-                  required
-                />
-              </div>
-              <div class="d-flex justify-content-end mt-5">
-                <a href="" class="btn">Next Step</a>
-              </div>
-            </form>
+            <div class="content p-4 rounded-3">
+              <header>
+                <h1>Personal info</h1>
+                <p>
+                  Please provide your name, email address, and phone number.
+                </p>
+              </header>
+              <form novalidate class="d-grid gap-4 p-2 fw-bold">
+                <div class="row">
+                  <label for="name" class="form-label col-6 p-0">Name</label>
+                  <span class="form-text col-6 text-end p-0"
+                    >This field is required</span
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control fw-bold"
+                    placeholder="e.g. Stephen King"
+                    required
+                  />
+                </div>
+                <div class="row">
+                  <label for="email" class="form-label col-6 p-0"
+                    >Email Address</label
+                  ><span class="form-text col-6 text-end p-0"
+                    >This field is required</span
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control fw-bold"
+                    placeholder="e.g. stephenking@lorem.com"
+                    required
+                  />
+                </div>
+                <div class="row">
+                  <label for="phone" class="form-label col-6 p-0"
+                    >Phone Number</label
+                  >
+                  <span class="form-text col-6 text-end p-0"
+                    >This field is required</span
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-control fw-bold"
+                    placeholder="e.g. +1 234 567 890"
+                    required
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="form-footer d-flex justify-content-end mt-5 p-3">
+              <a href="" class="btn">Next Step</a>
+            </div>
           </div>
           <!-- Step 1 end -->
 
           <!-- Step 2 start -->
 
-          <div class="form-container gap-3 d-none">
-            <header>
-              <h1>Select your plan</h1>
-              <p>You have the option of monthly or yearly billing.</p>
-            </header>
-            <div class="row row-cols-lg-3 row-cols-1 g-4">
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="assets/images/icon-arcade.svg" alt="" />
-                    <h3>Arcade</h3>
-                    <span>$9/mo</span>
+          <div class="form-container gap-3 px-5 d-none">
+            <div class="content d-grid gap-4 p-4 rounded-3">
+              <header>
+                <h1>Select your plan</h1>
+                <p>You have the option of monthly or yearly billing.</p>
+              </header>
+              <div class="row row-cols-lg-3 row-cols-1 g-4">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-grid gap-5">
+                      <img src="assets/images/icon-arcade.svg" alt="arcade" />
+                      <div class="card-text">
+                        <h3 class="fs-6 fw-bold">Arcade</h3>
+                        <span>$9/mo</span>
+                        <p>2 months free</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-grid gap-5">
+                      <img
+                        src="assets/images/icon-advanced.svg"
+                        alt="advanced"
+                      />
+                      <div class="card-text">
+                        <h3 class="fs-6 fw-bold">Advanced</h3>
+                        <span>$12/mo</span>
+                        <p>2 months free</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body d-grid gap-5">
+                      <img src="assets/images/icon-pro.svg" alt="pro" />
+                      <div class="card-text">
+                        <h3 class="fs-6 fw-bold">Pro</h3>
+                        <span>$15/mo</span>
+                        <p>2 months free</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="assets/images/icon-advanced.svg" alt="" />
-                    <h3>Advanced</h3>
-                    <span>$12/mo</span>
-                  </div>
+              <form>
+                <div
+                  class="form-check form-switch form-check-inline d-flex justify-content-center gap-3 p-3"
+                >
+                  <label for="switch" class="form-check-label">Monthly</label>
+                  <input
+                    type="checkbox"
+                    id="switch"
+                    class="form-check-input mx-0"
+                  />
+                  <label for="switch" class="form-check-label">Yearly</label>
                 </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                    <img src="assets/images/icon-pro.svg" alt="" />
-                    <h3>Pro</h3>
-                    <span>$15/mo</span>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
-            <form>
-              <div class="form-check form-switch form-check-inline">
-                <label for="switch" class="form-check-label">Monthly</label>
-                <input type="checkbox" id="switch" class="form-check-input" />
-                <label for="switch" class="form-check-label">Yearly</label>
-              </div>
-            </form>
-            <div class="d-flex justify-content-between">
+            <div class="form-footer d-flex justify-content-between mt-5 p-3">
               <a href="#" class="fw-bold text-decoration-none go-back-btn"
                 >Go Back</a
               >
@@ -226,7 +250,7 @@
                   >Online service Access to multiplayer games</label
                 >
               </div>
-              <div class="d-flex justify-content-between">
+              <div class="form-footer d-flex justify-content-between mt-5 p-3">
                 <a href="#" class="fw-bold text-decoration-none go-back-btn"
                   >Go Back</a
                 >
@@ -237,36 +261,38 @@
           <!-- Step 3 end -->
           <!-- Step 4 start -->
           <div class="form-container gap-3 d-none">
-            <header>
-              <h1>Finishing up</h1>
-              <p>Double-check everything looks OK before confirming.</p>
-            </header>
-            <table class="table table-borderless">
-              <thead>
-                <tr class="d-flex justify-content-between">
-                  <th class="d-flex flex-column">
-                    <span>Arcade(Yearly)</span>
-                    <a href="#" class="fw-normal">Change</a>
-                  </th>
-                  <th>$90/yr</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="d-flex justify-content-between">
-                  <td>Online service</td>
-                  <td class="price">+$10/yr</td>
-                </tr>
-                <tr class="d-flex justify-content-between">
-                  <td>Larger storage</td>
-                  <td class="price">+$10/yr</td>
-                </tr>
-                <tr class="d-flex justify-content-between total-row">
-                  <td>Total(per year)</td>
-                  <td class="total fw-bold fs-4">$120/yr</td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="d-flex justify-content-between">
+            <div class="content">
+              <header>
+                <h1>Finishing up</h1>
+                <p>Double-check everything looks OK before confirming.</p>
+              </header>
+              <table class="table table-borderless">
+                <thead>
+                  <tr class="d-flex justify-content-between">
+                    <th class="d-flex flex-column">
+                      <span>Arcade(Yearly)</span>
+                      <a href="#" class="fw-normal">Change</a>
+                    </th>
+                    <th>$90/yr</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="d-flex justify-content-between">
+                    <td>Online service</td>
+                    <td class="price">+$10/yr</td>
+                  </tr>
+                  <tr class="d-flex justify-content-between">
+                    <td>Larger storage</td>
+                    <td class="price">+$10/yr</td>
+                  </tr>
+                  <tr class="d-flex justify-content-between total-row">
+                    <td>Total(per year)</td>
+                    <td class="total fw-bold fs-4">$120/yr</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="form-footer d-flex justify-content-between mt-5 p-3">
               <a href="#" class="fw-bold text-decoration-none go-back-btn"
                 >Go Back</a
               >

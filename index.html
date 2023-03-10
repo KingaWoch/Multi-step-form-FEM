@@ -33,197 +33,278 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <main>
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-md-4 col-12">
-            <div class="sidebar">
-              <!-- Sidebar start -->
-              <ul class="list-group list-group-horizontal">
-                <li
-                  class="list-group-item d-flex align-items-center border-0 bg-transparent"
-                >
-                  <div class="number" style="border: 1px solid red">1</div>
-                </li>
-                <li
-                  class="list-group-item d-flex flex-column border-0 bg-transparent"
-                >
-                  Step 1
-                  <div class="fw-bold">Your info</div>
-                </li>
-              </ul>
-              <ul class="list-group list-group-horizontal">
-                <li
-                  class="list-group-item d-flex align-items-center border-0 bg-transparent"
-                >
-                  <div class="number" style="border: 1px solid red">2</div>
-                </li>
-                <li
-                  class="list-group-item d-flex flex-column border-0 bg-transparent"
-                >
-                  Step 2
-                  <div class="fw-bold">Select plan</div>
-                </li>
-              </ul>
-              <ul class="list-group list-group-horizontal">
-                <li
-                  class="list-group-item d-flex align-items-center border-0 bg-transparent"
-                >
-                  <div class="number" style="border: 1px solid red">3</div>
-                </li>
-                <li
-                  class="list-group-item d-flex flex-column border-0 bg-transparent"
-                >
-                  Step 3
-                  <div class="fw-bold">Add-ons</div>
-                </li>
-              </ul>
-              <ul class="list-group list-group-horizontal">
-                <li
-                  class="list-group-item d-flex align-items-center border-0 bg-transparent"
-                >
-                  <div class="number" style="border: 1px solid red">4</div>
-                </li>
-                <li
-                  class="list-group-item d-flex flex-column border-0 bg-transparent"
-                >
-                  Step 4
-                  <div class="fw-bold">Summary</div>
-                </li>
-              </ul>
-              <!-- Sidebar end -->
-            </div>
+  <body
+    class="d-flex flex-column align-items-center justify-content-lg-center gap-3"
+  >
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-md-4 col-12 align-items-center">
+          <!-- <picture
+            ><source
+              srcset="assets/images/bg-sidebar-desktop.svg"
+              media="(min-width: 375px)" />
+            <img src="assets/images/bg-sidebar-mobile.svg" alt=""
+          /></picture> -->
+          <div
+            class="sidebar h-100 p-4 gap-3 text-uppercase d-flex justify-content-sm-start flex-sm-column flex-row justify-content-center"
+          >
+            <!-- Sidebar start -->
+            <ul class="list-group list-group-horizontal d-flex">
+              <li
+                class="list-group-item d-flex bg-transparent border-1 rounded-circle align-items-center mt-2"
+              >
+                <div class="number fw-bold">1</div>
+              </li>
+              <li
+                class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
+              >
+                Step 1
+                <div class="fw-bold">Your info</div>
+              </li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li
+                class="list-group-item d-flex align-items-center bg-transparent border-1 rounded-circle mt-2"
+              >
+                <div class="number fw-bold">2</div>
+              </li>
+              <li
+                class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
+              >
+                Step 2
+                <div class="fw-bold">Select plan</div>
+              </li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li
+                class="list-group-item d-flex align-items-center bg-transparent border-1 rounded-circle mt-2"
+              >
+                <div class="number fw-bold">3</div>
+              </li>
+              <li
+                class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
+              >
+                Step 3
+                <div class="fw-bold">Add-ons</div>
+              </li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li
+                class="list-group-item d-flex align-items-center bg-transparent border-1 rounded-circle mt-2"
+              >
+                <div class="number fw-bold">4</div>
+              </li>
+              <li
+                class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
+              >
+                Step 4
+                <div class="fw-bold">Summary</div>
+              </li>
+            </ul>
+            <!-- Sidebar end -->
           </div>
-          <div class="col-8">
-            <div class="form-container">
-              <!-- Step 1 start -->
+        </div>
+        <div class="col-md-8 col-12">
+          <div class="form-container p-5 d-grid gap-3">
+            <!-- Step 1 start -->
+            <header>
               <h1>Personal info</h1>
               <p>Please provide your name, email address, and phone number.</p>
-              <form novalidate>
-                <label for="name" class="form-label">Name</label>
+            </header>
+            <form novalidate class="fw-bold d-grid gap-4">
+              <div class="row">
+                <label for="name" class="form-label col-6 p-0">Name</label>
+                <span class="form-text col-6 text-end p-0"
+                  >This field is required</span
+                >
                 <input
                   type="text"
                   id="name"
-                  class="form-control"
+                  class="form-control fw-bold"
                   placeholder="e.g. Stephen King"
                   required
                 />
-                <label for="email" class="form-label">Email Address</label>
+              </div>
+              <div class="row">
+                <label for="email" class="form-label col-6 p-0"
+                  >Email Address</label
+                ><span class="form-text col-6 text-end p-0"
+                  >This field is required</span
+                >
                 <input
                   type="email"
                   id="email"
-                  class="form-control"
+                  class="form-control fw-bold"
                   placeholder="e.g. stephenking@lorem.com"
                   required
                 />
+              </div>
 
-                <label for="phone" class="form-label">Phone Number</label>
+              <div class="row">
+                <label for="phone" class="form-label col-6 p-0"
+                  >Phone Number</label
+                >
+                <span class="form-text col-6 text-end p-0"
+                  >This field is required</span
+                >
                 <input
                   type="tel"
                   id="phone"
-                  class="form-control"
+                  class="form-control fw-bold"
                   placeholder="e.g. +1 234 567 890"
                   required
                 />
-                <a class="btn btn-primary" href="#">Next Step</a>
-              </form>
-            </div>
-            <!-- Step 1 end -->
+              </div>
+              <div class="d-flex justify-content-end mt-5">
+                <a href="" class="btn">Next Step</a>
+              </div>
+            </form>
+          </div>
+          <!-- Step 1 end -->
 
-            <!-- Step 2 start -->
+          <!-- Step 2 start -->
 
-            <div class="form-container">
+          <div class="form-container gap-3 d-none">
+            <header>
               <h1>Select your plan</h1>
               <p>You have the option of monthly or yearly billing.</p>
-              <div class="row row-cols-lg-3 row-cols-1 g-4">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <img src="assets/images/icon-arcade.svg" alt="" />
-                      <h3>Arcade</h3>
-                      <span>$9/mo</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <img src="assets/images/icon-advanced.svg" alt="" />
-                      <h3>Advanced</h3>
-                      <span>$12/mo</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card">
-                    <div class="card-body">
-                      <img src="assets/images/icon-pro.svg" alt="" />
-                      <h3>Pro</h3>
-                      <span>$15/mo</span>
-                    </div>
+            </header>
+            <div class="row row-cols-lg-3 row-cols-1 g-4">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="assets/images/icon-arcade.svg" alt="" />
+                    <h3>Arcade</h3>
+                    <span>$9/mo</span>
                   </div>
                 </div>
               </div>
-              <form>
-                <div class="form-check form-switch form-check-inline">
-                  <label for="switch" class="form-check-label">Monthly</label>
-                  <input type="checkbox" id="switch" class="form-check-input" />
-                  <label for="switch" class="form-check-label">Yearly</label>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="assets/images/icon-advanced.svg" alt="" />
+                    <h3>Advanced</h3>
+                    <span>$12/mo</span>
+                  </div>
                 </div>
-              </form>
-              <a href="#">Go Back</a>
-              <a href="" class="btn btn-primary">Next Step</a>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <img src="assets/images/icon-pro.svg" alt="" />
+                    <h3>Pro</h3>
+                    <span>$15/mo</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- Step 2 end -->
-            <!-- Step 3 start -->
-            <div class="form-container">
+            <form>
+              <div class="form-check form-switch form-check-inline">
+                <label for="switch" class="form-check-label">Monthly</label>
+                <input type="checkbox" id="switch" class="form-check-input" />
+                <label for="switch" class="form-check-label">Yearly</label>
+              </div>
+            </form>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="fw-bold text-decoration-none go-back-btn"
+                >Go Back</a
+              >
+              <a href="" class="btn fw-bold">Next Step</a>
+            </div>
+          </div>
+          <!-- Step 2 end -->
+          <!-- Step 3 start -->
+          <div class="form-container gap-3 d-none">
+            <header>
               <h1>Pick add-ons</h1>
               <p>Add-ons help enhance your gaming experience.</p>
-              <form>
-                <div class="form-check">
-                  <input type="checkbox" id="online-service" />
-                  <label for="online-service" class="form-check-label"
-                    >Online service Access to multiplayer games</label
-                  >
-                </div>
-                <a href="#">Go Back</a>
-                <a href="" class="btn btn-primary">Next Step</a>
-              </form>
-            </div>
-            <!-- Step 3 end -->
+            </header>
+            <form>
+              <div class="form-check">
+                <input type="checkbox" id="online-service" />
+                <label for="online-service" class="form-check-label"
+                  >Online service Access to multiplayer games</label
+                >
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="fw-bold text-decoration-none go-back-btn"
+                  >Go Back</a
+                >
+                <a href="" class="btn fw-bold">Next Step</a>
+              </div>
+            </form>
           </div>
+          <!-- Step 3 end -->
+          <!-- Step 4 start -->
+          <div class="form-container gap-3 d-none">
+            <header>
+              <h1>Finishing up</h1>
+              <p>Double-check everything looks OK before confirming.</p>
+            </header>
+            <table class="table table-borderless">
+              <thead>
+                <tr class="d-flex justify-content-between">
+                  <th class="d-flex flex-column">
+                    <span>Arcade(Yearly)</span>
+                    <a href="#" class="fw-normal">Change</a>
+                  </th>
+                  <th>$90/yr</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="d-flex justify-content-between">
+                  <td>Online service</td>
+                  <td class="price">+$10/yr</td>
+                </tr>
+                <tr class="d-flex justify-content-between">
+                  <td>Larger storage</td>
+                  <td class="price">+$10/yr</td>
+                </tr>
+                <tr class="d-flex justify-content-between total-row">
+                  <td>Total(per year)</td>
+                  <td class="total fw-bold fs-4">$120/yr</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-between">
+              <a href="#" class="fw-bold text-decoration-none go-back-btn"
+                >Go Back</a
+              >
+              <a href="" class="btn fw-bold confirm">Confirm</a>
+            </div>
+          </div>
+          <!-- Step 4 end -->
+          <!-- Step 5 start -->
+          <div
+            class="form-container d-flex flex-column align-items-center gap-3 d-none"
+          >
+            <img src="assets/images/icon-thank-you.svg" alt="thank you" />
+            <h1>Thank you!</h1>
+            <p class="text-center">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              email us at support@loremgaming.com.
+            </p>
+          </div>
+          <!-- Step 5 end -->
         </div>
       </div>
-    </main>
-
-    +$1/mo Larger storage Extra 1TB of cloud save +$2/mo Customizable Profile
-    Custom theme on your profile +$2/mo Go Back Next Step
-
-    <!-- Step 4 start -->
-
-    Finishing up Double-check everything looks OK before confirming.
-
-    <!-- Dynamically add subscription and add-on selections here -->
-
-    Total (per month/year) Go Back Confirm
-
-    <!-- Step 4 end -->
-
-    <!-- Step 5 start -->
-
-    Thank you! Thanks for confirming your subscription! We hope you have fun
-    using our platform. If you ever need support, please feel free to email us
-    at support@loremgaming.com.
-
-    <!-- Step 5 end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
     </div>
+
+    <!-- +$1/mo Larger storage Extra 1TB of cloud save +$2/mo Customizable Profile
+    Custom theme on your profile +$2/mo Go Back Next Step -->
+
+    <!--STEP -4 - Dynamically add subscription and add-on selections here -->
+
+    <footer class="attribution text-center">
+      <p>
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
+      </p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>

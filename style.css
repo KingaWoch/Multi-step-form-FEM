@@ -15,6 +15,14 @@
 
 * {
   font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -22,10 +30,118 @@ body {
 }
 
 .container {
+  background-color: var(--White);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  background-image: url(assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 575px) {
+  .sidebar {
+    background-image: url(assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.sidebar ul li {
+  color: var(--Cool-gray);
+}
+
+.sidebar ul li div {
+  color: var(--White);
+}
+
+/* FORM */
+
+h1 {
+  color: var(--Marine-blue);
+}
+
+.form-container p {
+  color: var(--Cool-gray);
+}
+
+form label {
+  color: var(--Marine-blue);
+}
+
+.form-text {
+  color: var(--Strawberry-red);
+  font-size: 0.8rem;
+  display: none;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder {
+  color: var(--Cool-gray);
+}
+
+.btn {
+  background-color: var(--Marine-blue);
+  color: var(--White);
+}
+
+.btn:hover {
+  background-color: var(--Purplish-blue);
+  color: var(--White);
+}
+
+.go-back-btn {
+  color: var(--Cool-gray);
+}
+
+.go-back-btn:hover {
+  color: var(--Marine-blue);
+}
+
+.table {
   background-color: var(--Alabaster);
 }
 
-.sidebar {
+.table th {
+  color: var(--Marine-blue);
+}
+
+.table th a {
+  color: var(--Cool-gray);
+}
+
+.table th a:hover {
+  color: var(--Purplish-blue);
+}
+
+tbody td:first-child {
+  color: var(--Cool-gray);
+}
+
+.total-row {
+  background: var(--White);
+}
+
+.price {
+  color: var(--Marine-blue);
+}
+
+.total {
+  color: var(--Purplish-blue);
+}
+
+.confirm {
   background-color: var(--Purplish-blue);
-  text-transform: uppercase;
+}
+
+.confirm:hover {
+  background-color: var(--Pastel-blue);
+}
+
+footer {
+  font-size: 0.7rem;
 }

@@ -19,3 +19,26 @@ cards.forEach((card) =>
     }
   })
 );
+
+// const inputFields = document.querySelectorAll(".input-field");
+// inputFields.forEach((inputField) =>
+//   inputField.addEventListener("click", () => {
+//     if (inputField.classList.contains("active")) {
+//       inputField.classList.remove("active");
+//     } else {
+//       inputField.classList.add("active");
+//     }
+//   })
+// );
+const inputFields = document.querySelectorAll(".input-field");
+const inputcheckbox = document.querySelectorAll(".form-check-input");
+
+inputFields.forEach((inputField) =>
+  inputField.addEventListener("click", () => {
+    if (inputcheckbox.checked) {
+      inputField.classList.remove("active");
+    } else {
+      inputField.classList.add("active");
+    }
+  })
+);

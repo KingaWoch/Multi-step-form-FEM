@@ -77,15 +77,6 @@ body {
   color: var(--Marine-blue);
 }
 
-/* .number {
-  height: 20px;
-  width: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-} */
-
 .sidebar ul li div {
   color: var(--White);
 }
@@ -183,7 +174,7 @@ input[type="tel"]::placeholder {
   color: var(--Cool-gray);
 }
 
-input[type="checkbox"] {
+#switch {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -221,10 +212,39 @@ input:checked + .switch-label:after {
   transform: translateX(-100%);
 }
 
-/* TABLE STEP-4 */
+/* STEP - 3 */
+
+.input-field {
+  border: 1px solid var(--Light-gray);
+  cursor: pointer;
+}
+
+.input-field:hover {
+  border-color: var(--Purplish-blue);
+}
+
+.input-field:hover label,
+.input-field input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.input-field span {
+  color: var(--Purplish-blue);
+}
+
+.input-field.active {
+  background-color: var(--Alabaster);
+  border-color: var(--Purplish-blue);
+}
+
+/* TABLE STEP - 4 */
 
 .table {
   background-color: var(--Alabaster);
+}
+
+.table-header {
+  border-bottom: 1px solid var(--Light-gray);
 }
 
 .table th {
@@ -254,6 +274,8 @@ tbody td:first-child {
 .total {
   color: var(--Purplish-blue);
 }
+
+/* STEP - 5 */
 
 .confirm {
   background-color: var(--Purplish-blue);

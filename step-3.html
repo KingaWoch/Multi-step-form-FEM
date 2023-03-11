@@ -101,29 +101,77 @@
           </div>
           <div class="col-md-8 col-12">
             <!-- Step 3 start -->
-            <div class="form-container gap-3">
-              <header>
-                <h1>Pick add-ons</h1>
-                <p>Add-ons help enhance your gaming experience.</p>
-              </header>
-              <form>
-                <div class="form-check">
-                  <input type="checkbox" id="online-service" />
-                  <label for="online-service" class="form-check-label"
-                    >Online service Access to multiplayer games</label
+            <div class="form-container p-5 d-grid mx-3">
+              <div class="content p-4 rounded-3">
+                <header>
+                  <h1>Pick add-ons</h1>
+                  <p>Add-ons help enhance your gaming experience.</p>
+                </header>
+                <form class="d-grid gap-3 pt-3">
+                  <label
+                    for="online-service"
+                    class="input-field d-flex align-items-center justify-content-between rounded-3 p-3"
                   >
-                </div>
-                <div
-                  class="form-footer d-flex justify-content-between mt-5 p-3"
+                    <div class="d-flex gap-4 align-items-center">
+                      <input
+                        type="checkbox"
+                        id="online-service"
+                        class="form-check-input"
+                      />
+                      <p class="mb-0">
+                        <label for="online-service" class="fw-bold"
+                          >Online service</label
+                        ><br />Access to multiplayer games
+                      </p>
+                    </div>
+                    <span>+$1/mo</span>
+                  </label>
+                  <label
+                    for="larger-storage"
+                    class="input-field d-flex align-items-center justify-content-between rounded-3 p-3"
+                  >
+                    <div class="d-flex gap-4 align-items-center">
+                      <input
+                        type="checkbox"
+                        id="larger-storage"
+                        class="form-check-input"
+                      />
+                      <p class="mb-0">
+                        <label for="larger-storage" class="fw-bold"
+                          >Larger storage</label
+                        ><br />Extra 1TB of cloud save
+                      </p>
+                    </div>
+                    <span>+$2/mo</span>
+                  </label>
+                  <label
+                    for="customizable-profile"
+                    class="input-field d-flex align-items-center justify-content-between rounded-3 p-3"
+                  >
+                    <div class="d-flex gap-4 align-items-center">
+                      <input
+                        type="checkbox"
+                        id="customizable-profile"
+                        class="form-check-input"
+                      />
+                      <p class="mb-0">
+                        <label for="customizable-profile" class="fw-bold"
+                          >Customizable profile</label
+                        ><br />Custom theme on your profile
+                      </p>
+                    </div>
+                    <span>+$2/mo</span>
+                  </label>
+                </form>
+              </div>
+              <div class="form-footer d-flex justify-content-between mt-5 p-3">
+                <a
+                  href="step-2.html"
+                  class="fw-bold text-decoration-none go-back-btn"
+                  >Go Back</a
                 >
-                  <a
-                    href="step-2.html"
-                    class="fw-bold text-decoration-none go-back-btn"
-                    >Go Back</a
-                  >
-                  <a href="step-4.html" class="btn">Next Step</a>
-                </div>
-              </form>
+                <a href="step-4.html" class="btn">Next Step</a>
+              </div>
             </div>
             <!-- Step 3 end -->
           </div>

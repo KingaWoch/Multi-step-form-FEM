@@ -46,9 +46,9 @@
               <!-- Sidebar start -->
               <ul class="list-group list-group-horizontal d-flex">
                 <li
-                  class="list-group-item d-flex border-1 rounded-circle align-items-center mt-2 active-step fw-bold"
+                  class="list-group-item d-flex bg-transparent border-1 rounded-circle align-items-center mt-2"
                 >
-                  1
+                  <div class="number fw-bold">1</div>
                 </li>
                 <li
                   class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
@@ -72,9 +72,9 @@
               </ul>
               <ul class="list-group list-group-horizontal">
                 <li
-                  class="list-group-item d-flex align-items-center bg-transparent border-1 rounded-circle mt-2"
+                  class="list-group-item d-flex align-items-center border-1 rounded-circle mt-2 active-step fw-bold"
                 >
-                  <div class="number fw-bold">3</div>
+                  3
                 </li>
                 <li
                   class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
@@ -100,65 +100,32 @@
             </div>
           </div>
           <div class="col-md-8 col-12">
-            <div class="form-container p-5 d-grid gap-3 mx-3">
-              <!-- Step 1 start -->
-              <div class="content p-4 rounded-3">
-                <header>
-                  <h1>Personal info</h1>
-                  <p>
-                    Please provide your name, email address, and phone number.
-                  </p>
-                </header>
-                <form novalidate class="d-grid gap-4 p-2 fw-bold">
-                  <div class="row">
-                    <label for="name" class="form-label col-6 p-0">Name</label>
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="text"
-                      id="name"
-                      class="form-control fw-bold"
-                      placeholder="e.g. Stephen King"
-                      required
-                    />
-                  </div>
-                  <div class="row">
-                    <label for="email" class="form-label col-6 p-0"
-                      >Email Address</label
-                    ><span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="email"
-                      id="email"
-                      class="form-control fw-bold"
-                      placeholder="e.g. stephenking@lorem.com"
-                      required
-                    />
-                  </div>
-                  <div class="row">
-                    <label for="phone" class="form-label col-6 p-0"
-                      >Phone Number</label
-                    >
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="tel"
-                      id="phone"
-                      class="form-control fw-bold"
-                      placeholder="e.g. +1 234 567 890"
-                      required
-                    />
-                  </div>
-                </form>
-              </div>
-              <div class="form-footer d-flex justify-content-end mt-5 p-3">
-                <a href="step-2.html" class="btn">Next Step</a>
-              </div>
+            <!-- Step 3 start -->
+            <div class="form-container gap-3">
+              <header>
+                <h1>Pick add-ons</h1>
+                <p>Add-ons help enhance your gaming experience.</p>
+              </header>
+              <form>
+                <div class="form-check">
+                  <input type="checkbox" id="online-service" />
+                  <label for="online-service" class="form-check-label"
+                    >Online service Access to multiplayer games</label
+                  >
+                </div>
+                <div
+                  class="form-footer d-flex justify-content-between mt-5 p-3"
+                >
+                  <a
+                    href="step-2.html"
+                    class="fw-bold text-decoration-none go-back-btn"
+                    >Go Back</a
+                  >
+                  <a href="step-4.html" class="btn fw-bold">Next Step</a>
+                </div>
+              </form>
             </div>
-            <!-- Step 1 end -->
+            <!-- Step 3 end -->
           </div>
         </div>
       </main>

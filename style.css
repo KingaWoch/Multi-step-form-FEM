@@ -64,8 +64,17 @@ body {
   }
 }
 
-.sidebar ul li {
+.sidebar ul li:nth-child(2) {
   color: var(--Cool-gray);
+}
+
+.sidebar ul li:first-child {
+  color: var(--White);
+}
+
+.sidebar ul li:first-child.active-step {
+  background-color: var(--Light-blue);
+  color: var(--Marine-blue);
 }
 
 /* .number {

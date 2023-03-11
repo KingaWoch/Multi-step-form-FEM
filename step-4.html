@@ -46,9 +46,9 @@
               <!-- Sidebar start -->
               <ul class="list-group list-group-horizontal d-flex">
                 <li
-                  class="list-group-item d-flex border-1 rounded-circle align-items-center mt-2 active-step fw-bold"
+                  class="list-group-item d-flex bg-transparent border-1 rounded-circle align-items-center mt-2"
                 >
-                  1
+                  <div class="number fw-bold">1</div>
                 </li>
                 <li
                   class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
@@ -85,9 +85,9 @@
               </ul>
               <ul class="list-group list-group-horizontal">
                 <li
-                  class="list-group-item d-flex align-items-center bg-transparent border-1 rounded-circle mt-2"
+                  class="list-group-item d-flex align-items-center border-1 rounded-circle mt-2 active-step fw-bold"
                 >
-                  <div class="number fw-bold">4</div>
+                  4
                 </li>
                 <li
                   class="list-group-item d-flex flex-column border-0 bg-transparent d-none d-sm-block"
@@ -100,69 +100,56 @@
             </div>
           </div>
           <div class="col-md-8 col-12">
-            <div class="form-container p-5 d-grid gap-3 mx-3">
-              <!-- Step 1 start -->
-              <div class="content p-4 rounded-3">
+            <!-- Step 4 start -->
+            <div class="form-container gap-3">
+              <div class="content">
                 <header>
-                  <h1>Personal info</h1>
-                  <p>
-                    Please provide your name, email address, and phone number.
-                  </p>
+                  <h1>Finishing up</h1>
+                  <p>Double-check everything looks OK before confirming.</p>
                 </header>
-                <form novalidate class="d-grid gap-4 p-2 fw-bold">
-                  <div class="row">
-                    <label for="name" class="form-label col-6 p-0">Name</label>
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="text"
-                      id="name"
-                      class="form-control fw-bold"
-                      placeholder="e.g. Stephen King"
-                      required
-                    />
-                  </div>
-                  <div class="row">
-                    <label for="email" class="form-label col-6 p-0"
-                      >Email Address</label
-                    ><span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="email"
-                      id="email"
-                      class="form-control fw-bold"
-                      placeholder="e.g. stephenking@lorem.com"
-                      required
-                    />
-                  </div>
-                  <div class="row">
-                    <label for="phone" class="form-label col-6 p-0"
-                      >Phone Number</label
-                    >
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
-                    <input
-                      type="tel"
-                      id="phone"
-                      class="form-control fw-bold"
-                      placeholder="e.g. +1 234 567 890"
-                      required
-                    />
-                  </div>
-                </form>
+                <table class="table table-borderless">
+                  <thead>
+                    <tr class="d-flex justify-content-between">
+                      <th class="d-flex flex-column">
+                        <span>Arcade(Yearly)</span>
+                        <a href="#" class="fw-normal">Change</a>
+                      </th>
+                      <th>$90/yr</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="d-flex justify-content-between">
+                      <td>Online service</td>
+                      <td class="price">+$10/yr</td>
+                    </tr>
+                    <tr class="d-flex justify-content-between">
+                      <td>Larger storage</td>
+                      <td class="price">+$10/yr</td>
+                    </tr>
+                    <tr class="d-flex justify-content-between total-row">
+                      <td>Total(per year)</td>
+                      <td class="total fw-bold fs-4">$120/yr</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="form-footer d-flex justify-content-end mt-5 p-3">
-                <a href="step-2.html" class="btn">Next Step</a>
+              <div class="form-footer d-flex justify-content-between mt-5 p-3">
+                <a
+                  href="step-3.html"
+                  class="fw-bold text-decoration-none go-back-btn"
+                  >Go Back</a
+                >
+                <a href="step-5.html" class="btn fw-bold confirm">Confirm</a>
               </div>
             </div>
-            <!-- Step 1 end -->
+            <!-- Step 4 end -->
           </div>
         </div>
       </main>
     </div>
+
+    <!--STEP -4 - Dynamically add subscription and add-on selections here -->
+
     <footer class="attribution text-center">
       <p>
         Challenge by

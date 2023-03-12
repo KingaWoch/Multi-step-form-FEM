@@ -107,7 +107,7 @@
                   <h1>Pick add-ons</h1>
                   <p>Add-ons help enhance your gaming experience.</p>
                 </header>
-                <form class="d-grid gap-3 pt-3">
+                <form class="d-grid gap-3 pt-2">
                   <label
                     for="online-service"
                     class="input-field d-flex align-items-center justify-content-between rounded-3 p-3"
@@ -187,6 +187,32 @@
         <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
       </p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+      const inputFields = document.querySelectorAll(".input-field");
+      const inputcheckbox = document.querySelectorAll(".form-check-input");
+
+      inputFields.forEach((inputField) =>
+        inputField.addEventListener("click", () => {
+          if (inputcheckbox.checked) {
+            inputField.classList.remove("active");
+          } else {
+            inputField.classList.add("active");
+          }
+        })
+      );
+
+      // step 3
+
+      // const inputFields = document.querySelectorAll(".input-field");
+      // inputFields.forEach((inputField) =>
+      //   inputField.addEventListener("click", () => {
+      //     if (inputField.classList.contains("active")) {
+      //       inputField.classList.remove("active");
+      //     } else {
+      //       inputField.classList.add("active");
+      //     }
+      //   })
+      // );
+    </script>
   </body>
 </html>

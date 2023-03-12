@@ -81,7 +81,7 @@ body {
   color: var(--White);
 }
 
-/* FORM */
+/* FORM  STEP - 1*/
 
 .content {
   background-color: var(--White);
@@ -102,13 +102,16 @@ form label {
 .form-text {
   color: var(--Strawberry-red);
   font-size: 0.8rem;
-  display: none;
 }
 
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="tel"]::placeholder {
   color: var(--Cool-gray);
+}
+
+input.invalid {
+  border-color: var(--Strawberry-red);
 }
 
 .form-footer {
@@ -152,6 +155,7 @@ input[type="tel"]::placeholder {
 
 .card-text h3 {
   color: var(--Marine-blue);
+  font-size: 1rem;
 }
 
 .card-text span {
@@ -172,6 +176,32 @@ input[type="tel"]::placeholder {
 
 .toggle span {
   color: var(--Cool-gray);
+}
+
+.toggle span.active {
+  color: var(--Marine-blue);
+  font-weight: 700;
+}
+/* 
+.monthly-price.monthly-plan {
+  display: block;
+} */
+
+.yearly-price {
+  display: none;
+}
+
+.yearly-price.yearly-plan {
+  display: block;
+}
+
+.card p {
+  display: none;
+}
+
+.card p.yearly-plan {
+  display: block;
+  font-weight: 700;
 }
 
 #switch {
@@ -302,5 +332,33 @@ footer {
     bottom: 0;
     right: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .card-text h3 {
+    font-size: 0.8rem;
+  }
+
+  .card-text span {
+    font-size: 0.6rem;
+  }
+
+  .card-text p {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-text h3 {
+    font-size: 1rem;
+  }
+
+  .card-text span {
+    font-size: 0.9rem;
+  }
+
+  .card-text p {
+    font-size: 0.9rem;
   }
 }

@@ -109,12 +109,15 @@
                     Please provide your name, email address, and phone number.
                   </p>
                 </header>
-                <form novalidate class="d-grid gap-4 p-2 fw-bold">
+                <form
+                  novalidate
+                  class="d-grid gap-4 p-2 fw-bold form-first-step"
+                >
                   <div class="row">
                     <label for="name" class="form-label col-6 p-0">Name</label>
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
+                    <span
+                      class="form-text name-error-text col-6 text-end p-0"
+                    ></span>
                     <input
                       type="text"
                       id="name"
@@ -126,9 +129,9 @@
                   <div class="row">
                     <label for="email" class="form-label col-6 p-0"
                       >Email Address</label
-                    ><span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
+                    ><span
+                      class="form-text email-error-text col-6 text-end p-0"
+                    ></span>
                     <input
                       type="email"
                       id="email"
@@ -141,9 +144,9 @@
                     <label for="phone" class="form-label col-6 p-0"
                       >Phone Number</label
                     >
-                    <span class="form-text col-6 text-end p-0"
-                      >This field is required</span
-                    >
+                    <span
+                      class="form-text phone-error-text col-6 text-end p-0"
+                    ></span>
                     <input
                       type="tel"
                       id="phone"
@@ -155,7 +158,7 @@
                 </form>
               </div>
               <div class="form-footer d-flex justify-content-end mt-5 p-3">
-                <a href="step-2.html" class="btn">Next Step</a>
+                <a href="step-2.html" class="btn-first-step">Next Step</a>
               </div>
             </div>
             <!-- Step 1 end -->

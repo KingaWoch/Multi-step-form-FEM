@@ -107,41 +107,44 @@
                   <h1>Select your plan</h1>
                   <p>You have the option of monthly or yearly billing.</p>
                 </header>
-                <div class="row row-cols-lg-3 row-cols-1 py-3">
-                  <div class="col">
+                <div class="row row-cols-md-3 row-cols-1 p-2">
+                  <div class="col p-1">
                     <div class="card">
-                      <div class="card-body d-grid gap-4">
+                      <div class="card-body d-md-grid gap-4 d-flex">
                         <img src="assets/images/icon-arcade.svg" alt="arcade" />
                         <div class="card-text">
-                          <h3 class="fs-6 fw-bold">Arcade</h3>
-                          <span>$9/mo</span>
+                          <h3 class="fw-bold">Arcade</h3>
+                          <span class="monthly-price">$9/mo</span>
+                          <span class="yearly-price">$90/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col p-1">
                     <div class="card">
-                      <div class="card-body d-grid gap-4">
+                      <div class="card-body d-md-grid gap-4 d-flex">
                         <img
                           src="assets/images/icon-advanced.svg"
                           alt="advanced"
                         />
                         <div class="card-text">
-                          <h3 class="fs-6 fw-bold">Advanced</h3>
-                          <span>$12/mo</span>
+                          <h3 class="fw-bold">Advanced</h3>
+                          <span class="monthly-price">$12/mo</span>
+                          <span class="yearly-price">$120/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col p-1">
                     <div class="card">
-                      <div class="card-body d-grid gap-4">
+                      <div class="card-body d-md-grid gap-4 d-flex">
                         <img src="assets/images/icon-pro.svg" alt="pro" />
                         <div class="card-text">
-                          <h3 class="fs-6 fw-bold">Pro</h3>
-                          <span>$15/mo</span>
+                          <h3 class="fw-bold">Pro</h3>
+                          <span class="monthly-price">$15/mo</span>
+                          <span class="yearly-price">$150/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
                       </div>
@@ -151,7 +154,7 @@
                 <div
                   class="toggle d-flex justify-content-center p-3 mt-3"
                 >
-                   <span class="me-3">Monthly</span>
+                   <span class="monthly me-3">Monthly</span>
                   <input type="checkbox" id="switch" /><label class="switch-label" for="switch"
                 >Toggle</label
                 >
@@ -181,6 +184,45 @@
         <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
       </p>
     </footer>
-    <script src="script.js"></script>
+    <script>
+
+      const cards = document.querySelectorAll(".card");
+      const switchBtn = document.getElementById("switch");
+      const monthly = document.querySelector(".monthly");
+      const yearly = document.querySelector(".yearly");
+      const monthlyPrice = document.querySelectorAll(".monthly-price");
+      const yearlyPrice = document.querySelectorAll(".yearly-price");
+      const cardP = document.querySelectorAll(".card p");
+
+      
+
+      cards.forEach((card) =>
+        card.addEventListener("click", () => {
+        if (card.classList.contains("active")) {
+        card.classList.toggle("active");
+        } else {
+        cards.forEach((card) => card.classList.remove("active"));
+        card.classList.add("active");
+        }
+        })
+      );
+
+        switchBtn.addEventListener("click", () => {
+          if(switchBtn.checked) {
+            yearly.classList.add("active");
+            monthly.classList.remove("active");
+            cardP.forEach((p) => p.classList.add("yearly-plan"))
+            yearlyPrice.forEach((price) => price.classList.add("yearly-plan"));
+            monthlyPrice.forEach((price) => price.style.display = "none");
+          } else {
+            yearly.classList.remove("active");
+            monthly.classList.add("active");
+            cardP.forEach((p) => p.classList.remove("yearly-plan"))
+            yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
+            monthlyPrice.forEach((price) => price.style.display = "block");
+          }
+        })
+
+    </script>
   </body>
 </html>

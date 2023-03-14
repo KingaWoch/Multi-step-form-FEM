@@ -162,7 +162,6 @@
     </footer>
     <script>
       const selectedPlan = localStorage.getItem("h3");
-
       const kind = localStorage.getItem("selectedTime");
       console.log(kind);
 
@@ -170,6 +169,8 @@
         ".selected-plan"
       ).textContent = `${selectedPlan} ${kind}`;
       const selectedPlanPrice = document.querySelector(".selected-plan-price");
+      const planPrice = localStorage.getItem("plan-price");
+      selectedPlanPrice.innerHTML = planPrice;
     </script>
   </body>
 </html>

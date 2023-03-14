@@ -114,7 +114,7 @@
                         <img src="assets/images/icon-arcade.svg" alt="arcade" />
                         <div class="card-text">
                           <h3 class="fw-bold">Arcade</h3>
-                          <span class="monthly-price">$9/mo</span>
+                          <span class="plan-price monthly-price">$9/mo</span>
                           <span class="yearly-price">$90/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
@@ -130,7 +130,7 @@
                         />
                         <div class="card-text">
                           <h3 class="fw-bold">Advanced</h3>
-                          <span class="monthly-price">$12/mo</span>
+                          <span class="plan-price monthly-price">$12/mo</span>
                           <span class="yearly-price">$120/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
@@ -143,7 +143,7 @@
                         <img src="assets/images/icon-pro.svg" alt="pro" />
                         <div class="card-text">
                           <h3 class="fw-bold">Pro</h3>
-                          <span class="monthly-price">$15/mo</span>
+                          <span class="plan-price monthly-price">$15/mo</span>
                           <span class="yearly-price">$150/yr</span>
                           <p class="m-0">2 months free</p>
                         </div>
@@ -187,7 +187,6 @@
     <script>
 
       const cards = document.querySelectorAll(".card");
-      // const toggle = document.querySelector(".toggle")
       const switchBtn = document.getElementById("switch");
       const monthly = document.querySelector(".monthly");
       const yearly = document.querySelector(".yearly");
@@ -207,6 +206,8 @@
         }
         const planName = card.querySelector("h3");
         localStorage.setItem("h3", planName.innerHTML);
+        const planPrice = card.querySelector(".plan-price");
+        localStorage.setItem("plan-price", planPrice.innerHTML);
         })
       );
 
@@ -217,14 +218,14 @@
             yearly.classList.add("active");
             monthly.classList.remove("active");
             cardP.forEach((p) => p.classList.add("yearly-plan"))
-            yearlyPrice.forEach((price) => price.classList.add("yearly-plan"));
-            monthlyPrice.forEach((price) => price.style.display = "none");        
+            // yearlyPrice.forEach((price) => price.classList.add("yearly-plan"));
+            // monthlyPrice.forEach((price) => price.style.display = "none");        
           } else {
             yearly.classList.remove("active");
             monthly.classList.add("active");
             cardP.forEach((p) => p.classList.remove("yearly-plan"))
-            yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
-            monthlyPrice.forEach((price) => price.style.display = "block");
+            // yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
+            // monthlyPrice.forEach((price) => price.style.display = "block");
           }
           monthly.classList.add("active");
           obj.kind = val;
@@ -233,8 +234,24 @@
           console.log(selectedTime)
 
           localStorage.setItem("selectedTime", selectedTime);
+          switchPrice(val);
         });
 
+        function switchPrice (checked) {
+          const monthlyPrice = [9, 12, 15];
+          const yearlyPrice = [90, 120, 150];
+          const prices = document.querySelectorAll(".plan-price");
+          if (checked) {
+            prices[0].innerHTML = `$${yearlyPrice[0]}/yr`;
+            prices[1].innerHTML = `$${yearlyPrice[1]}/yr`;
+            prices[2].innerHTML = `$${yearlyPrice[2]}/yr`;
+
+          } else {
+              prices[0].innerHTML = `$${monthlyPrice[0]}/mo`;
+              prices[1].innerHTML = `$${monthlyPrice[1]}/mo`;
+              prices[2].innerHTML = `$${monthlyPrice[2]}/mo`;
+          }
+        }
     </script>
   </body>
 </html>

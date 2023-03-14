@@ -217,15 +217,12 @@
           if(val) {
             yearly.classList.add("active");
             monthly.classList.remove("active");
-            cardP.forEach((p) => p.classList.add("yearly-plan"))
-            // yearlyPrice.forEach((price) => price.classList.add("yearly-plan"));
-            // monthlyPrice.forEach((price) => price.style.display = "none");        
+            cardP.forEach((p) => p.classList.add("yearly-plan"))     
+            const selectedTime = "Yearly";
           } else {
             yearly.classList.remove("active");
             monthly.classList.add("active");
             cardP.forEach((p) => p.classList.remove("yearly-plan"))
-            // yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
-            // monthlyPrice.forEach((price) => price.style.display = "block");
           }
           monthly.classList.add("active");
           obj.kind = val;

@@ -124,7 +124,7 @@
                         ><br />Access to multiplayer games
                       </p>
                     </div>
-                    <span>+$1/mo</span>
+                    <span class="add-on-price"></span>
                   </label>
                   <label
                     for="larger-storage"
@@ -142,7 +142,7 @@
                         ><br />Extra 1TB of cloud save
                       </p>
                     </div>
-                    <span>+$2/mo</span>
+                    <span class="add-on-price"></span>
                   </label>
                   <label
                     for="customizable-profile"
@@ -160,7 +160,7 @@
                         ><br />Custom theme on your profile
                       </p>
                     </div>
-                    <span>+$2/mo</span>
+                    <span class="add-on-price"></span>
                   </label>
                 </form>
               </div>
@@ -198,21 +198,39 @@
           } else {
             inputField.classList.add("active");
           }
+          const addOnNames = inputField.querySelector("label");
+          console.log(addOnNames.innerHTML);
+          localStorage.setItem("label", addOnNames.innerHTML);
+          // const addOnName = inputField.querySelector("label");
+          // // console.log(addOnName.innerHTML);
+          // localStorage.setItem("label", addOnName.innerHTML);
+          const addOnPrice = inputField.querySelector("span");
+          //console.log(addOnPrice.innerHTML);
+          localStorage.setItem("span", addOnPrice.innerHTML);
         })
       );
+      const kind = localStorage.getItem("selectedTime");
+      //console.log(kind);
 
-      // step 3
+      function switchAddOnPrice() {
+        const monthlyAddOnPrice = [1, 2, 2];
+        const yearlyAddOnPrice = [10, 20, 20];
 
-      // const inputFields = document.querySelectorAll(".input-field");
-      // inputFields.forEach((inputField) =>
-      //   inputField.addEventListener("click", () => {
-      //     if (inputField.classList.contains("active")) {
-      //       inputField.classList.remove("active");
-      //     } else {
-      //       inputField.classList.add("active");
-      //     }
-      //   })
-      // );
+        const addOnPrices = document.querySelectorAll(".add-on-price");
+        //console.log(addOnPrices);
+
+        if (kind) {
+          //console.log("y");
+          addOnPrices[0].innerHTML = `$${yearlyAddOnPrice[0]}/yr`;
+          addOnPrices[1].innerHTML = `$${yearlyAddOnPrice[1]}/yr`;
+          addOnPrices[2].innerHTML = `$${yearlyAddOnPrice[2]}/yr`;
+        } else {
+          addOnPrices[0].innerHTML = `$${monthlyAddOnPrice[0]}/mo`;
+          addOnPrices[1].innerHTML = `$${monthlyAddOnPrice[1]}/mo`;
+          addOnPrices[2].innerHTML = `$${monthlyAddOnPrice[2]}/mo`;
+        }
+      }
+      switchAddOnPrice();
     </script>
   </body>
 </html>

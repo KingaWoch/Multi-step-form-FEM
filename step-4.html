@@ -123,16 +123,16 @@
                   </thead>
                   <tbody class="px-3">
                     <tr class="d-flex justify-content-between">
-                      <td>Online service</td>
-                      <td class="price">+$10/yr</td>
+                      <td class="add-on-name"></td>
+                      <td class="price"></td>
                     </tr>
                     <tr class="d-flex justify-content-between">
-                      <td>Larger storage</td>
-                      <td class="price">+$10/yr</td>
+                      <td class="add-on-name"></td>
+                      <td class="price"></td>
                     </tr>
                     <tr class="d-flex justify-content-between total-row">
-                      <td>Total(per year)</td>
-                      <td class="total fw-bold fs-4">$120/yr</td>
+                      <td></td>
+                      <td class="total fw-bold fs-4"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -163,14 +163,34 @@
     <script>
       const selectedPlan = localStorage.getItem("h3");
       const kind = localStorage.getItem("selectedTime");
-      console.log(kind);
 
       document.querySelector(
         ".selected-plan"
       ).textContent = `${selectedPlan} ${kind}`;
+
       const selectedPlanPrice = document.querySelector(".selected-plan-price");
       const planPrice = localStorage.getItem("plan-price");
       selectedPlanPrice.innerHTML = planPrice;
+
+      // const addOnName = document.querySelector(".add-on-name");
+      // const addOn = localStorage.getItem("label");
+      // console.log(addOn);
+      // addOnName.textContent = addOn;
+
+      // const addOnPrice = document.querySelector(".price");
+      // const price = localStorage.getItem("span");
+      // console.log(price);
+      // addOnPrice.textContent = price;
+
+      const addOnNames = document.querySelectorAll(".add-on-name");
+      const addOn = localStorage.getItem("label");
+      console.log(addOn);
+      addOnNames.forEach((addonName) => (addonName.textContent = addOn));
+
+      const addOnPrice = document.querySelector(".price");
+      const price = localStorage.getItem("span");
+      console.log(price);
+      addOnPrice.textContent = price;
     </script>
   </body>
 </html>

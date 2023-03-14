@@ -154,11 +154,11 @@
                 <div
                   class="toggle d-flex justify-content-center p-3 mt-3"
                 >
-                   <span class="monthly me-3">Monthly</span>
+                   <span class="kind monthly me-3">Monthly</span>
                   <input type="checkbox" id="switch" /><label class="switch-label" for="switch"
                 >Toggle</label
                 >
-                <span class="yearly ms-3">Yearly</span>
+                <span class="kind yearly ms-3">Yearly</span>
                 </div>
             </div>
             <div class="form-footer d-flex justify-content-between mt-5 p-3">
@@ -187,12 +187,14 @@
     <script>
 
       const cards = document.querySelectorAll(".card");
+      // const toggle = document.querySelector(".toggle")
       const switchBtn = document.getElementById("switch");
       const monthly = document.querySelector(".monthly");
       const yearly = document.querySelector(".yearly");
       const monthlyPrice = document.querySelectorAll(".monthly-price");
       const yearlyPrice = document.querySelectorAll(".yearly-price");
       const cardP = document.querySelectorAll(".card p");
+      const obj = {kind: null};
       
       cards.forEach((card) =>
         card.addEventListener("click", () => {
@@ -209,12 +211,14 @@
       );
 
         switchBtn.addEventListener("click", () => {
-          if(switchBtn.checked) {
+          const val = document.querySelector("input").checked;
+          localStorage.setItem("input", val);
+          if(val) {
             yearly.classList.add("active");
             monthly.classList.remove("active");
             cardP.forEach((p) => p.classList.add("yearly-plan"))
             yearlyPrice.forEach((price) => price.classList.add("yearly-plan"));
-            monthlyPrice.forEach((price) => price.style.display = "none");
+            monthlyPrice.forEach((price) => price.style.display = "none");        
           } else {
             yearly.classList.remove("active");
             monthly.classList.add("active");
@@ -222,6 +226,13 @@
             yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
             monthlyPrice.forEach((price) => price.style.display = "block");
           }
+          monthly.classList.add("active");
+          obj.kind = val;
+
+          const selectedTime = ` (${obj.kind ? "Yearly" : "Monthly"})`;
+          console.log(selectedTime)
+
+          localStorage.setItem("selectedTime", selectedTime);
         });
 
     </script>

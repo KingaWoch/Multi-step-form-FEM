@@ -113,7 +113,9 @@
                       class="table-header d-flex justify-content-between pb-3"
                     >
                       <th class="d-flex flex-column">
-                        <span class="selected-plan">Arcade(Yearly)</span>
+                        <h2 class="selected-plan fs-6">
+                          Arcade<span class="selected-time">(Yearly)</span>
+                        </h2>
                         <a href="step-2.html" class="fw-normal">Change</a>
                       </th>
                       <th class="selected-plan-price">$90/yr</th>
@@ -149,9 +151,6 @@
         </div>
       </main>
     </div>
-
-    <!--STEP -4 - Dynamically add subscription and add-on selections here -->
-
     <footer class="attribution text-center">
       <p>
         Challenge by
@@ -163,7 +162,13 @@
     </footer>
     <script>
       const selectedPlan = localStorage.getItem("h3");
-      document.querySelector(".selected-plan").textContent = selectedPlan;
+
+      const kind = localStorage.getItem("selectedTime");
+      console.log(kind);
+
+      document.querySelector(
+        ".selected-plan"
+      ).textContent = `${selectedPlan} ${kind}`;
       const selectedPlanPrice = document.querySelector(".selected-plan-price");
     </script>
   </body>

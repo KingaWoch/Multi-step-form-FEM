@@ -113,10 +113,10 @@
                       class="table-header d-flex justify-content-between pb-3"
                     >
                       <th class="d-flex flex-column">
-                        <span>Arcade(Yearly)</span>
-                        <a href="#" class="fw-normal">Change</a>
+                        <span class="selected-plan">Arcade(Yearly)</span>
+                        <a href="step-2.html" class="fw-normal">Change</a>
                       </th>
-                      <th>$90/yr</th>
+                      <th class="selected-plan-price">$90/yr</th>
                     </tr>
                   </thead>
                   <tbody class="px-3">
@@ -161,6 +161,10 @@
         <a href="https://github.com/KingaWoch" target="_blank">Kinga Woch</a>.
       </p>
     </footer>
-    <script></script>
+    <script>
+      const selectedPlan = localStorage.getItem("h3");
+      document.querySelector(".selected-plan").textContent = selectedPlan;
+      const selectedPlanPrice = document.querySelector(".selected-plan-price");
+    </script>
   </body>
 </html>

@@ -193,17 +193,18 @@
       const monthlyPrice = document.querySelectorAll(".monthly-price");
       const yearlyPrice = document.querySelectorAll(".yearly-price");
       const cardP = document.querySelectorAll(".card p");
-
       
-
       cards.forEach((card) =>
         card.addEventListener("click", () => {
+
         if (card.classList.contains("active")) {
         card.classList.toggle("active");
         } else {
         cards.forEach((card) => card.classList.remove("active"));
         card.classList.add("active");
         }
+        const planName = card.querySelector("h3");
+        localStorage.setItem("h3", planName.innerHTML);
         })
       );
 
@@ -221,7 +222,7 @@
             yearlyPrice.forEach((price) => price.classList.remove("yearly-plan"));
             monthlyPrice.forEach((price) => price.style.display = "block");
           }
-        })
+        });
 
     </script>
   </body>

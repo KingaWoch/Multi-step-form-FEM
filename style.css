@@ -182,10 +182,6 @@ input.invalid {
   color: var(--Marine-blue);
   font-weight: 700;
 }
-/* 
-.monthly-price.monthly-plan {
-  display: block;
-} */
 
 .yearly-price {
   display: none;
@@ -240,6 +236,18 @@ input:checked + .switch-label {
 input:checked + .switch-label:after {
   left: calc(100% - 2px);
   transform: translateX(-100%);
+}
+
+.error {
+  font-size: 0.8rem;
+  color: var(--Strawberry-red);
+  bottom: -1rem;
+  right: 1rem;
+  display: none;
+}
+
+.error.visible {
+  display: block;
 }
 
 /* STEP - 3 */

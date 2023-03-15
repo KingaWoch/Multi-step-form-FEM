@@ -161,13 +161,14 @@
                 <span class="kind yearly ms-3">Yearly</span>
                 </div>
             </div>
-            <div class="form-footer d-flex justify-content-between mt-5 p-3">
+            <div class="form-footer d-flex justify-content-between mt-5 p-3 position-relative">
               <a
                 href="index.html"
                 class="fw-bold text-decoration-none go-back-btn"
                 >Go Back</a
               >
               <a href="step-3.html" class="btn">Next Step</a>
+              <span class="error position-absolute fw-bold">This field is required</span>
             </div>
             
           </div>
@@ -194,6 +195,8 @@
       const yearlyPrice = document.querySelectorAll(".yearly-price");
       const cardP = document.querySelectorAll(".card p");
       const obj = {kind: null};
+      const nextBtn = document.querySelector(".btn");
+      const error = document.querySelector(".error");
       
       cards.forEach((card) =>
         card.addEventListener("click", () => {
@@ -249,6 +252,18 @@
               prices[2].innerHTML = `$${monthlyPrice[2]}/mo`;
           }
         }
+
+        nextBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          cards.forEach((card) => {
+            if (!card.classList.contains("active")) {
+              error.classList.add("visible");
+            } else {
+              error.classList.remove("visible");
+              window.location.href = "step-3.html"
+            }
+          })
+        })
     </script>
   </body>
 </html>

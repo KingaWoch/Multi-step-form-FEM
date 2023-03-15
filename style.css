@@ -35,12 +35,9 @@ body {
 
 .container {
   background-color: var(--White);
-}
-
-@media (max-width: 575px) {
-  .container {
-    background-color: transparent;
-  }
+  -webkit-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* SIDEBAR */
@@ -52,16 +49,6 @@ body {
   background-position: center;
   border-radius: 0.8rem;
   font-size: 0.8rem;
-}
-
-@media (max-width: 575px) {
-  .sidebar {
-    background-image: url(assets/images/bg-sidebar-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 0%;
-  }
 }
 
 .sidebar ul li:nth-child(2) {
@@ -328,11 +315,27 @@ footer {
 }
 
 @media (max-width: 575px) {
+  .container {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    background-image: url(assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0%;
+  }
+
   .content {
     position: absolute;
     width: 90%;
     top: 63px;
     right: 5%;
+    -webkit-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 13px 0px rgba(0, 0, 0, 0.1);
   }
 
   .form-footer {
